@@ -1,0 +1,5 @@
+.dotted-border {
+  border: 2px dotted #000; /* Puedes ajustar el color y el grosor del borde */
+  padding: 15px; /* Espacio interno alrededor del contenido */
+  border-radius: 5px; /* Opcional: bordes redondeados */
+}

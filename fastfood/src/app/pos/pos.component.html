@@ -1,0 +1,16 @@
+<h2 class="text-center">POS</h2>
+
+<form (submit)="onSubmit()" class="border border-dotted border-primary p-3 rounded">
+
+  <div class="mb-3">
+    <label for="clienteNombre" class="form-label">Nombre del Cliente</label>
+    <input type="text" id="clienteNombre" [(ngModel)]="nombre" name="name" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="pedidoDescripcion" class="form-label">Pedido</label>
+    <input type="text" id="pedidoDescripcion" [(ngModel)]="descripcion" name="descripcion" class="form-control" required>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Agregar Pedido</button>
+</form>

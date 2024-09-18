@@ -1,0 +1,12 @@
+<h2>Punto de Entrega</h2>
+
+<ul>
+  @for (order of orders; track order){
+    @if (order.status==='ready'){
+      <li>
+        <strong>{{order.numero}}  -  {{order.nombre}}</strong>:  {{order.description}}
+        <button class="btn btn-primary" (click)="deliverOrder(order.numero)">Entregar</button>
+      </li>
+    }
+  }
+</ul>

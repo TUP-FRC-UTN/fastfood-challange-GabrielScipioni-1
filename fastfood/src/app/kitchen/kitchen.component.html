@@ -1,0 +1,23 @@
+<h2>Cocina</h2>
+
+<ul>
+  @for (order of orders; track order){
+    <li>
+      <strong>{{order.numero}}  -  {{order.nombre}}</strong>: {{order.description}}
+      @switch (order.status){
+
+        @case ('pending'){
+          <span>(Pendiente)</span>
+          <button class="btn btn-warning" (click)="updateOrder(this.order.numero,'in-progress')">Tomar Pedido</button>
+        }
+        @case ('in-progress'){
+          <span>(En Proceso)</span>
+          <button class="btn btn-success" (click)="updateOrder(this.order.numero,'ready')">Pedido Listo</button>
+        }
+        @case ('ready'){
+          <span>(Listo para entregar)</span>
+        }
+      }
+    </li>
+  }
+</ul>
